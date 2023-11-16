@@ -30,7 +30,7 @@ const Profile = () => {
                             
                         </p>
                         <ul>
-                            <li>{"JSON.stringify(user?.token)"}</li>
+                            <li>{JSON.stringify(user?.token)}</li>
                             <li>
                                 <button
                                 onClick={() => signOut()}
