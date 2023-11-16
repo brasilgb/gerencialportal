@@ -5,6 +5,7 @@ import { IoChevronDown, IoPerson } from "react-icons/io5";
 
 const Profile = () => {
     const { user, signOut } = useAuthContext();
+    console.log(user)
     const [showMenu, setShowMenu] = useState(false);
 
     return (
@@ -29,7 +30,7 @@ const Profile = () => {
                             
                         </p>
                         <ul>
-                            <li>{JSON.stringify(user?.token)}</li>
+                            <li>{"JSON.stringify(user?.token)"}</li>
                             <li>
                                 <button
                                 onClick={() => signOut()}
