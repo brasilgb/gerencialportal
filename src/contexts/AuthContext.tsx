@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     const loadStorage = async () => {
-      const recoveredUser = localStorage.getItem('Auth_user');
+      const recoveredUser = localStorage.getItem('portal_user');
       if (recoveredUser) {
         setUser(JSON.parse(recoveredUser));
       }
@@ -21,7 +21,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   }, []);
 
   const signOut = () => {
-    localStorage.removeItem('Auth_user');
+    localStorage.removeItem('portal_user');
     setUser(null);
     router.push('/login');
   }
