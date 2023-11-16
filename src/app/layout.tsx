@@ -1,9 +1,8 @@
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google';
-import './globals.css'
+import '@/styles/globals.css';
 import Header from "@/components/header"
 import Footer from "@/components/footer"
-import { AuthProvider } from "@/contexts/AuthContext";
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -26,13 +25,13 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${roboto.variable}`}>
         <div className="flex min-h-screen flex-col items-center justify-center bg-blue-light">
-          <AuthProvider>
+
             <Header />
             <div className="flex-grow py-8 w-full px-4">
               {children}
             </div>
             <Footer />
-          </AuthProvider>
+
 
         </div>
       </body>
